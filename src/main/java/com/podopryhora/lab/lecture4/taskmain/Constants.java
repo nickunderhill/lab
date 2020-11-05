@@ -9,25 +9,21 @@ public class Constants {
 
     public final static String REGEX_EMAIL = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
-    public final static String REGEX_NICKNAME = "";
+    public final static String REGEX_COMMENT = ".{3,1000}";
 
-    public final static String REGEX_COMMENT = "";
+    public final static String REGEX_PHONE = "^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$";
 
-    public final static String REGEX_PHONE = "";
+    public final static String REGEX_SKYPE = "^[a-zA-Z][a-zA-Z0-9_.,-]{5,31}$";
 
-    public final static String REGEX_MOBILE_PHONE = "";
+    public final static String REGEX_ZIP = "[0-9]+{4,10}";
 
-    public final static String REGEX_SKYPE = "";
+    public final static String REGEX_CITY = "^[a-zA-Z]{2,20}";
 
-    public final static String REGEX_ZIP = "";
+    public final static String REGEX_STREET = "^[a-zA-Z0-9.]{2,50}";
 
-    public final static String REGEX_CITY = "";
+    public final static String REGEX_HOUSE = "^[a-zA-Z0-9./]{1,10}";
 
-    public final static String REGEX_STREET = "";
-
-    public final static String REGEX_HOUSE = "";
-
-    public final static String REGEX_APARTMENT = "";
+    public final static String REGEX_APARTMENT = "^[a-zA-Z0-9.]{1,10}";
 
     // Messages
     public static final String MSG_WRONG_EMAIL_FORMAT = "Wrong format! Email should match pattern \"login@domain.com\"";
