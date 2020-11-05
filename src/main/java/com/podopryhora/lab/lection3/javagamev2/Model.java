@@ -58,19 +58,16 @@ public class Model {
         totalAttempts++;
     }
 
-    boolean isWin(int number) {
+    public boolean isWin(int number) {
         return number == getSecretNumber();
     }
 
-    void updateModelData(int number, View view) {
+    public void updateRangeAndLog(int number) {
         if (number > getSecretNumber()) {
-            view.printMessage(View.MESSAGE_TRY_SMALLER);
             setMax(number);
-            getValidAttemptsList().add(number);
         } else if (number < getSecretNumber()) {
-            view.printMessage(View.MESSAGE_TRY_BIGGER);
             setMin(number);
-            getValidAttemptsList().add(number);
         }
+        validAttemptsList.add(number);
     }
 }

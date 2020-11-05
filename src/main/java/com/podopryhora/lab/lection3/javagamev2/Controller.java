@@ -15,6 +15,7 @@ public class Controller {
 
     public void startGame() {
         int currentNumber = 0;
+
         model.setMin(Constants.MIN_RANGE);
         model.setMax(Constants.MAX_RANGE);
         model.setSecretNumber(Model.rand(Constants.MIN_RANGE, Constants.MAX_RANGE));
@@ -23,11 +24,19 @@ public class Controller {
 
         while (!model.isWin(currentNumber)) {
             currentNumber = readAndValidateInput();
-            model.updateModelData(currentNumber, view);
+            printHint(currentNumber);
+            model.updateRangeAndLog(currentNumber);
         }
 
-        model.getValidAttemptsList().add(currentNumber);
         view.printSummary(model);
+    }
+
+    private void printHint(int currentNumber) {
+        if (currentNumber < model.getSecretNumber()) {
+            view.printMessage(View.MESSAGE_TRY_BIGGER);
+        } else if (currentNumber > model.getSecretNumber()) {
+            view.printMessage(View.MESSAGE_TRY_SMALLER);
+        }
     }
 
     private int readAndValidateInput() {

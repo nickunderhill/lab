@@ -5,10 +5,10 @@ public class View {
     public static final String MESSAGE_WELCOME = "Welcome to the \"Guess the number\" game!";
     public static final String MESSAGE_ATTEMPTS = "Total attempts performed: %d, valid attempts performed: %d%n";
     public static final String MESSAGE_GUESS = "Please, enter the number from range (%d, %d):%n";
-    public static final String MESSAGE_WRONG_INPUT = "Wrong answer! The input number is out of range!";
-    public static final String MESSAGE_TRY_BIGGER = "Wrong answer! Try a bigger number!";
-    public static final String MESSAGE_TRY_SMALLER = "Wrong answer! Try a smaller number!";
-    public static final String MESSAGE_CONGRATULATIONS = "That's the right number! You win!";
+    public static final String MESSAGE_WRONG_INPUT = "Error: the input number is out of range!";
+    public static final String MESSAGE_TRY_BIGGER = "Try a bigger number!";
+    public static final String MESSAGE_TRY_SMALLER = "Try a smaller number!";
+    public static final String MESSAGE_CONGRATULATIONS = "That's the right number! You won!";
     public static final String MESSAGE_ATTEMPTS_HISTORY = "Winning numbers sequence: %s";
 
 
