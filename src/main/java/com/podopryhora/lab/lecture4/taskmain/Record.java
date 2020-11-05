@@ -1,9 +1,7 @@
 package com.podopryhora.lab.lecture4.taskmain;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.StringJoiner;
 
 public class Record {
     private String lastName;
@@ -19,14 +17,45 @@ public class Record {
     private String email;
     private String skype;
     private Address address;
-    LocalDate creationDate;
-    LocalDate lastChange;
+    private LocalDate creationDate;
+    private LocalDate lastChange;
 
-
-    public String getInitials() {
-        return String.format("%s %s.", lastName, firstName.substring(0,1));
+    public String getLastName() {
+        return lastName;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getInitials() {
+        return String.format("%s %s.", lastName, firstName.substring(0, 1));
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Record.class.getSimpleName() + "[", "]")
+                .add("lastName='" + lastName + "'")
+                .add("firstName='" + firstName + "'")
+                .add("email='" + email + "'")
+                .toString();
+    }
 }
 
 enum RecordGroup {
