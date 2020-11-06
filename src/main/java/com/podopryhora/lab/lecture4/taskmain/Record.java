@@ -44,6 +44,11 @@ public class Record {
         this.email = email;
     }
 
+    /**
+     * Method returns lastName field concatenated with space followed by first letter of firstName with period.
+     * E.g, for lastName = "Doe", firstName "John" should be returned "Doe J.".
+     * @return String
+     */
     public String getInitials() {
         return String.format("%s %s.", lastName, firstName.substring(0, 1));
     }
