@@ -14,7 +14,7 @@ public class RecordController {
         this.recordBook = recordBook;
     }
 
-    public void start() {
+    public void processInput() {
         Record record = new Record();
         String firstName;
         String lastName;
@@ -36,7 +36,7 @@ public class RecordController {
         recordBook.getRecordsBook().add(record);
 
         recordView.printMessage(Constants.MSG_SUCCESS_EN);
-        recordView.printMessage(record.toString());
+        recordBook.getRecordsBook().forEach(r -> recordView.printMessage(r.toString()));
     }
 
     private String readAndValidateInputString(String errorMessage, String regex) {

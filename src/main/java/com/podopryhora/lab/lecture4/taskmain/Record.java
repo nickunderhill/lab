@@ -50,11 +50,11 @@ public class Record {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Record.class.getSimpleName() + "[", "]")
-                .add("lastName='" + lastName + "'")
-                .add("firstName='" + firstName + "'")
-                .add("email='" + email + "'")
-                .toString();
+        return "{" +
+                "lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
 

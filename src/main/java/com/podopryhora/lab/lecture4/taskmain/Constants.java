@@ -7,7 +7,7 @@ public class Constants {
 
     public final static String REGEX_NAME_EN = "^[a-zA-Z]{2,20}";
 
-    public final static String REGEX_EMAIL = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+    public final static String REGEX_EMAIL = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
 
     public final static String REGEX_COMMENT = ".{3,1000}";
 
