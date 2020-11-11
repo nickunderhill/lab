@@ -1,4 +1,4 @@
-package com.podopryhora.lab.lecture6.taskmain.controller;
+package com.podopryhora.lab.lecture6.taskmain.constants;
 
 public class RegexConstants {
 

@@ -1,10 +1,11 @@
-package com.podopryhora.lab.lecture6.taskmain;
+package com.podopryhora.lab.lecture6.taskmain.controllers;
 
-import com.podopryhora.lab.lecture6.taskmain.controller.RegexConstants;
-import com.podopryhora.lab.lecture6.taskmain.exception.NotUniqueEmailException;
-import com.podopryhora.lab.lecture6.taskmain.model.Record;
-import com.podopryhora.lab.lecture6.taskmain.model.RecordBook;
-import com.podopryhora.lab.lecture6.taskmain.view.RecordView;
+import com.podopryhora.lab.lecture6.taskmain.constants.RegexConstants;
+import com.podopryhora.lab.lecture6.taskmain.constants.TextConstants;
+import com.podopryhora.lab.lecture6.taskmain.exceptions.NotUniqueEmailException;
+import com.podopryhora.lab.lecture6.taskmain.models.Record;
+import com.podopryhora.lab.lecture6.taskmain.models.RecordBook;
+import com.podopryhora.lab.lecture6.taskmain.views.RecordView;
 
 import java.util.Scanner;
 
@@ -59,7 +60,7 @@ public class RecordController {
      *
      * @return valid name String
      */
-    private String readAndValidateName() {
+    public String readAndValidateName() {
         String result;
         while (!(scanner.hasNext() && (result = scanner.next()).matches(RegexConstants.REGEX_NAME_EN))) {
             recordView.printLocalizedMessage(TextConstants.MSG_WRONG_NAME_FORMAT);
@@ -72,7 +73,7 @@ public class RecordController {
      *
      * @return valid email String
      */
-    private String readAndValidateEmail() {
+    public String readAndValidateEmail() {
         String result;
         while (!(scanner.hasNext() && (result = scanner.next()).matches(RegexConstants.REGEX_EMAIL))) {
             recordView.printLocalizedMessage(TextConstants.MSG_WRONG_EMAIL_FORMAT);

@@ -1,6 +1,6 @@
-package com.podopryhora.lab.lecture6.taskmain.model;
+package com.podopryhora.lab.lecture6.taskmain.models;
 
-import com.podopryhora.lab.lecture6.taskmain.exception.NotUniqueEmailException;
+import com.podopryhora.lab.lecture6.taskmain.exceptions.NotUniqueEmailException;
 
 import java.util.ArrayList;
 import java.util.List;

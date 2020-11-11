@@ -1,8 +1,9 @@
 package com.podopryhora.lab.lecture6.taskmain;
 
-import com.podopryhora.lab.lecture6.taskmain.model.Record;
-import com.podopryhora.lab.lecture6.taskmain.model.RecordBook;
-import com.podopryhora.lab.lecture6.taskmain.view.RecordView;
+import com.podopryhora.lab.lecture6.taskmain.controllers.RecordController;
+import com.podopryhora.lab.lecture6.taskmain.models.Record;
+import com.podopryhora.lab.lecture6.taskmain.models.RecordBook;
+import com.podopryhora.lab.lecture6.taskmain.views.RecordView;
 
 public class Main {
 

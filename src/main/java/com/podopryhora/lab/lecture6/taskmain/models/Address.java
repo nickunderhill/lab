@@ -1,4 +1,4 @@
-package com.podopryhora.lab.lecture6.taskmain.model;
+package com.podopryhora.lab.lecture6.taskmain.models;
 
 import java.util.StringJoiner;
 

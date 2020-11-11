@@ -1,4 +1,4 @@
-package com.podopryhora.lab.lecture6.taskmain.view;
+package com.podopryhora.lab.lecture6.taskmain.views;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
