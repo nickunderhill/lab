@@ -22,14 +22,14 @@ public class RecordController {
         String lastName;
         String email;
 
-        recordView.printMessage(Constants.MSG_ENTER_NAME_EN);
-        firstName = readAndValidateInputString(Constants.MSG_WRONG_NAME_FORMAT_EN, Constants.REGEX_NAME_EN);
+        recordView.printLocalizedMessage(TextConstants.MSG_ENTER_NAME);
+        firstName = readAndValidateInputString(TextConstants.MSG_WRONG_NAME_FORMAT, RegexConstants.REGEX_NAME_EN);
 
-        recordView.printMessage(Constants.MSG_ENTER_LAST_NAME_EN);
-        lastName = readAndValidateInputString(Constants.MSG_WRONG_NAME_FORMAT_EN, Constants.REGEX_NAME_EN);
+        recordView.printLocalizedMessage(TextConstants.MSG_ENTER_LAST_NAME);
+        lastName = readAndValidateInputString(TextConstants.MSG_WRONG_NAME_FORMAT, RegexConstants.REGEX_NAME_EN);
 
-        recordView.printMessage(Constants.MSG_ENTER_EMAIL_EN);
-        email = readAndValidateInputString(Constants.MSG_WRONG_EMAIL_FORMAT, Constants.REGEX_EMAIL);
+        recordView.printLocalizedMessage(TextConstants.MSG_ENTER_EMAIL);
+        email = readAndValidateInputString(TextConstants.MSG_WRONG_EMAIL_FORMAT, RegexConstants.REGEX_EMAIL);
 
         record.setFirstName(firstName);
         record.setLastName(lastName);
@@ -37,8 +37,8 @@ public class RecordController {
 
         recordBook.getRecordsBook().add(record);
 
-        recordView.printMessage(Constants.MSG_SUCCESS_EN);
-        recordBook.getRecordsBook().forEach(r -> recordView.printMessage(r.toString()));
+        recordView.printLocalizedMessage(TextConstants.MSG_SUCCESS);
+        recordBook.getRecordsBook().forEach(r -> recordView.printText(r.toString()));
     }
 
     /**
@@ -50,7 +50,7 @@ public class RecordController {
     private String readAndValidateInputString(String errorMessage, String regex) {
         String result;
         while (!(scanner.hasNext() && (result = scanner.next()).matches(regex))) {
-            recordView.printMessage(errorMessage);
+            recordView.printLocalizedMessage(errorMessage);
         }
         return result;
     }
